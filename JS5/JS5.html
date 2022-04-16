@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instituto de Computação</title>
+</head>
+
+<body>
+    <form name="calcular">
+        Informe o raio <input id = "raio" type="number"><button id="btn">OK</button><br>
+        Área do círculo <input id = "area" type="number"><br>
+        Circunferência <input id = "circ" type="number">
+    </form>
+</body>
+<script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            var raio = document.getElementById('raio');
+            var area_circ = document.getElementById('area');
+            var circunferencia = document.getElementById('circ');
+            
+            area.value = (Math.PI * raio.value**2).toFixed(2);
+            circunferencia.value = (2 * Math.PI * raio.value).toFixed(2);
+            return false;
+        }
+    </script>
+</html>
