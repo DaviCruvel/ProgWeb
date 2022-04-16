@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+</head>
+	
+<body>
+	<script>
+		addEventListener("mousemove", function(event) {
+ 			while(document.querySelectorAll('div').length > 15)
+        		document.body.removeChild(document.querySelectorAll('div')[0]);
+ 				var ponto = document.createElement("div");
+
+	 			ponto.className = "ponto";
+				ponto.style.top = (event.pageY - 4) + "px";
+ 				ponto.style.left = (event.pageX - 4) + "px";
+ 		
+				document.body.appendChild(ponto)});
+	</script>
+</body>
+</html>
