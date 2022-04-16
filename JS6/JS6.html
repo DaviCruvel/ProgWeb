@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" dever></script>
+    <title>Colunas</title>
+</head>
+<body>
+    Informe a altura das barras: <input id="h1" type="number">
+    <input id="h2" type="number">
+    <input id="h3" type="number">
+    <input id="h4" type="number">
+    <input id="h5" type="number">
+    <br>
+    Informar a largura das barras: <input id='largura' type="number">
+
+    <br>
+    <button id="draw">Desenhar o gráfico</button>
+    <br>
+    <div id="col1"></div>
+    <div id="col2"></div>
+    <div id="col3"></div>
+    <div id="col4"></div>
+    <div id="col5"></div>
+    <script>
+        var btn = document.getElementById('draw');
+        btn.onclick = function(){
+            for(var i = 1; i <= 5; i++){
+                var h = document.getElementById('h' + i);
+                var w = document.getElementById('largura');
+                var column = document.getElementById('col' + i);
+                column.style.height = h.value + "px";
+                column.style.width = w.value + "px";
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
